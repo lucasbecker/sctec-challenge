@@ -8,18 +8,19 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
+import type { Enterprise } from "@/types/enterprise"
 
 interface EnterpriseConfirmProps {
   open: boolean
   onOpenChange: (open: boolean) => void
-  itemName: string
+  data: Enterprise | null
   onConfirm: () => void
 }
 
 export function EnterpriseConfirm({
   open,
   onOpenChange,
-  itemName,
+  data,
   onConfirm,
 }: EnterpriseConfirmProps) {
   return (
@@ -30,7 +31,7 @@ export function EnterpriseConfirm({
             Confirmar exclusão
           </AlertDialogTitle>
           <AlertDialogDescription>
-            Tem certeza que deseja excluir <strong>{itemName}</strong>? Esta
+            Tem certeza que deseja excluir <strong>{data?.name}</strong>? Esta
             ação não pode ser desfeita.
           </AlertDialogDescription>
         </AlertDialogHeader>

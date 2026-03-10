@@ -1,29 +1,34 @@
 import { Building2, CheckCircle2, XCircle, TrendingUp } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import type { Enterprise } from "@/types/enterprise"
 
-export function StatsCards() {
-  const total = 0
-  const ativos = 0
-  const inativos = 0
-  const segmentos = 0
+type EnterpriseStatsProps = {
+  data: Array<Enterprise>
+}
+
+export function EnterpriseStats({ data }: EnterpriseStatsProps) {
+  const total = data.length
+  const actives = data.filter((d) => d.status === "Ativo").length
+  const inactives = data.filter((d) => d.status === "Inativo").length
+  const segments = new Set(data.map((d) => d.segment)).size
 
   const stats = [
     { label: "Total", value: total, icon: Building2, color: "text-foreground" },
     {
       label: "Ativos",
-      value: ativos,
+      value: actives,
       icon: CheckCircle2,
       color: "text-primary",
     },
     {
       label: "Inativos",
-      value: inativos,
+      value: inactives,
       icon: XCircle,
       color: "text-destructive",
     },
     {
       label: "Segmentos",
-      value: segmentos,
+      value: segments,
       icon: TrendingUp,
       color: "text-foreground",
     },
