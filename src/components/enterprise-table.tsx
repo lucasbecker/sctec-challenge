@@ -74,7 +74,7 @@ export function EnterpriseTable({
       <div className="animate-fade-in flex flex-col items-center justify-center py-16 text-muted-foreground">
         <p className="font-display text-lg">Nenhum empreendimento encontrado</p>
         <p className="mt-1 text-sm">
-          Cadastre um novo empreendimento para começar.
+          Cadastre um novo empreendimento ou limpe os filtros para começar.
         </p>
       </div>
     )
@@ -148,7 +148,7 @@ export function EnterpriseTable({
                     variant="secondary"
                     className={
                       item.status === "Ativo"
-                        ? "bg-primary/10 text-primary focus-visible:ring-primary/20 dark:bg-primary/20 dark:text-accent-foreground dark:focus-visible:ring-primary/40 [a]:hover:bg-primary/20"
+                        ? "bg-primary/10 text-primary focus-visible:ring-primary/20 dark:bg-primary/20 dark:text-primary dark:focus-visible:ring-primary/40 [a]:hover:bg-primary/20"
                         : "bg-destructive/10 text-destructive focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:focus-visible:ring-destructive/40 [a]:hover:bg-destructive/20"
                     }
                   >
