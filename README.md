@@ -1,5 +1,7 @@
 # SCTEC Challenge
 
+> [Vídeo Pitch no YouTube](https://youtu.be/oOftX6Ct4QI)
+
 ## Visão Geral
 
 Este projeto consiste em uma aplicação web do tipo **CRUD (Create, Read, Update, Delete)** desenvolvida para gerenciar informações sobre **empreendimentos localizados no estado de Santa Catarina**.
